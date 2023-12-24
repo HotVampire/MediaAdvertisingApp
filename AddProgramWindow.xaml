@@ -1,0 +1,34 @@
+﻿<Window x:Class="MediaAdvertisingApp.AddProgramWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавление программы" Height="400" Width="400">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="10">
+            <TextBlock Text="Добавление новой программы" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+
+            <StackPanel>
+                <Label Content="Название программы"/>
+                <TextBox x:Name="NameTextBox" Margin="0,0,0,10"/>
+            </StackPanel>
+
+            <StackPanel>
+                <Label Content="Рейтинг"/>
+                <TextBox x:Name="RatingTextBox" Margin="0,0,0,10"/>
+            </StackPanel>
+
+            <StackPanel>
+                <Label Content="Время рекламных блоков"/>
+                <TextBox x:Name="AdBlocksTimeTextBox" Margin="0,0,0,10"/>
+            </StackPanel>
+
+            <StackPanel>
+                <Label Content="Стоимость минуты"/>
+                <TextBox x:Name="CostPerMinuteTextBox" Margin="0,0,0,10"/>
+            </StackPanel>
+
+            <!-- Добавьте другие поля программы здесь -->
+
+            <Button Content="Добавить" Click="AddButton_Click" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

@@ -1,0 +1,14 @@
+﻿<Window x:Class="MediaAdvertisingApp.EditEmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Редактирование сотрудника" Height="300" Width="400">
+    <StackPanel Margin="10">
+        <Label Content="ФИО сотрудника"/>
+        <TextBox x:Name="EmployeeNameTextBox" Margin="0,0,0,10"/>
+
+        <Label Content="Должность"/>
+        <TextBox x:Name="PositionTextBox" Margin="0,0,0,10"/>
+
+        <Button Content="Сохранить" Click="SaveChanges_Click" HorizontalAlignment="Center"/>
+    </StackPanel>
+</Window>

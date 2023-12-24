@@ -1,0 +1,49 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:av="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="av"
+    x:Class="MediaAdvertisingApp.AssignEmployeeToCustomerAndProgramPage"
+    Title="Assign Employee To Customer And Program"
+    Background="{StaticResource {x:Static SystemColors.ControlBrushKey}}"
+    av:DesignHeight="400">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="20">
+            <Label Content="Выберите заказчика:" />
+            <ComboBox x:Name="CustomersComboBox" Width="200" Margin="5" DisplayMemberPath="Название_компании" />
+
+            <Label Content="Выберите программу:" />
+            <ComboBox x:Name="ProgramsComboBox" Width="200" Margin="5" DisplayMemberPath="Название_программы" />
+
+            <Label Content="Выберите сотрудника:" />
+            <ComboBox x:Name="EmployeesComboBox" Width="200" Margin="5" DisplayMemberPath="ФИО_сотрудника" />
+
+            <Button Content="Назначить" Click="AssignButton_Click" HorizontalAlignment="Center" Margin="0,10,0,10"/>
+
+            <TextBlock FontSize="16" FontWeight="Bold" Margin="0,10,0,5">Сотрудники, отвечающие за программу и покупающие рекламу:</TextBlock>
+            <ListBox x:Name="EmployeesListBox" BorderBrush="Black" BorderThickness="1" MinHeight="200">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="5">
+                            <CheckBox x:Name="EmployeeCheckBox" />
+                            <TextBlock Text="{Binding ФИО_сотрудника}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Path=Программа.Название_программы, StringFormat='отвечает за {0}'}"/>
+                            <TextBlock Text="{Binding Path=Заказчик.Название_компании, StringFormat='покупает рекламу {0}'}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+
+            <!-- Добавленная кнопка отвязки -->
+            <Button Content="Отвязать" Click="UnassignButton_Click" HorizontalAlignment="Center" Margin="0,10,0,10"/>
+
+            <!-- Добавленные элементы для отображения информации -->
+            <TextBlock x:Name="SelectedEmployeeTextBlock" Margin="5" />
+            <TextBlock x:Name="SelectedProgramTextBlock" Margin="5" />
+            <TextBlock x:Name="SelectedCustomerTextBlock" Margin="5" />
+        </StackPanel>
+    </ScrollViewer>
+</Page>

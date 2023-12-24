@@ -1,0 +1,24 @@
+﻿<Page x:Class="MediaAdvertisingApp.EmployeesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="EmployeesPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="26.2"/>
+            <RowDefinition Height="3.76"/>
+        </Grid.RowDefinitions>
+
+        <!-- DataGrid для отображения данных -->
+        <DataGrid x:Name="EmployeesDataGrid" SelectionChanged="EmployeesDataGrid_SelectionChanged" Grid.Row="1" AutoGenerateColumns="True" />
+
+        <!-- Кнопки для взаимодействия с данными -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5,0,1">
+            <Button x:Name="AddEmployeeButton" Content="Добавить" Click="AddEmployee_Click"/>
+            <Button x:Name="DeleteEmployeeButton" Content="Удалить" Click="DeleteEmployee_Click"/>
+            <Button x:Name="EditEmployeeButton" Content="Редактировать" Click="EditEmployee_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Page>

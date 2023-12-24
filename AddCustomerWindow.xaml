@@ -1,0 +1,37 @@
+﻿<Window x:Class="MediaAdvertisingApp.AddCustomerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавление заказчика" Height="300" Width="400">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="10">
+            <TextBlock Text="Добавление нового заказчика" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+
+            <StackPanel>
+                <Label Content="Название компании"/>
+                <TextBox x:Name="NameTextBox" Margin="0,0,0,10"/>
+            </StackPanel>
+
+            <StackPanel>
+                <Label Content="Длительность рекламы"/>
+                <TextBox x:Name="DurationTextBox" Margin="0,0,0,10"/>
+            </StackPanel>
+
+            <StackPanel>
+                <Label Content="Банковские реквизиты"/>
+                <TextBox x:Name="BankDetailsTextBox" Margin="0,0,0,10"/>
+            </StackPanel>
+
+            <StackPanel>
+                <Label Content="Контактный телефон"/>
+                <TextBox x:Name="PhoneTextBox" Margin="0,0,0,10"/>
+            </StackPanel>
+
+            <StackPanel>
+                <Label Content="Контактное лицо"/>
+                <TextBox x:Name="ContactPersonTextBox" Margin="0,0,0,10"/>
+            </StackPanel>
+
+            <Button Content="Добавить" Click="AddButton_Click" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
